@@ -16,7 +16,7 @@ def get_movies(category):
     Function that gets the json response to our url request
     '''
     get_movies_url = base_url.format(category,api_key)
-
+    import pdb;pdb set trace
     with urllib.request.urlopen(get_movies_url) as url:
         get_movies_data = url.read()
         get_movies_response = json.loads(get_movies_data)
