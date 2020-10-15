@@ -54,7 +54,6 @@ def process_results(movie_list):
             movie_results.append(movie_object)
 
     return movie_results
-
 def get_movie(id):
     get_movie_details_url = base_url.format(id,api_key)
 
@@ -72,4 +71,5 @@ def get_movie(id):
             vote_count = movie_details_response.get('vote_count')
 
             movie_object = Movie(id,title,overview,poster,vote_average,vote_count)
-return movie_object
+
+    return movie_object
